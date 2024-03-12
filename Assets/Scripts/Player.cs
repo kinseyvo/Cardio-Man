@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+	public CharacterDatabase characterDB;
+
+    public SpriteRenderer artworkSprite;
+
+    private int selectedOption = 0;
 
 	public int maxHealth = 100;
 	public int currentHealth;
@@ -14,6 +19,17 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		if (!PlayerPrefs.HasKey("selectedOption"))
+        {
+            selectedOption = 0;
+        }
+
+        else
+        {
+            Load();
+        }
+		
+        UpdateCharacter(selectedOption);
 		currentHealth = maxHealth;
 		healthBar.SetMaxHealth(maxHealth);
     }
@@ -27,12 +43,6 @@ public class Player : MonoBehaviour
 			TakeDamage(20);
 			
 		}
-
-		// For Testing
-		// if (Input.GetKeyDown(KeyCode.H))
-		// {
-		// 	HealthBox(20);
-		// }
 
 		if (currentHealth <= 0)
 		{
@@ -67,6 +77,31 @@ public class Player : MonoBehaviour
 			HealthBox(20);
 			Destroy(obj.gameObject);
         }
+    }
+
+	private void UpdateCharacter(int selectedOption)
+	{
+		if (characterDB != null)
+    	{
+        	Character character = characterDB.GetCharacter(selectedOption);
+        	if (character != null && artworkSprite != null)
+        	{
+            	artworkSprite.sprite = character.characterSprite;
+        	}
+        	else
+        	{
+            	Debug.LogError("character is null");
+        	}
+    	}
+    	// else
+    	// {
+        // 	Debug.LogError("characterdatabase is null");
+    	// }
+	}
+
+    private void Load()
+    {
+        selectedOption = PlayerPrefs.GetInt("selectedOption");
     }
 
 }
