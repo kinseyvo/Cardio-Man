@@ -3,12 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+using System;
 
+
+[Serializable]
 public class Score : MonoBehaviour
 {
 
     public TMP_Text MyscoreText;
-    private int ScoreNum;
+    public int ScoreNum;
+
+    public string playerName;
+
+    public Score(string name, int score)
+    {
+        this.playerName = name;
+        this.ScoreNum = score;
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,4 +39,13 @@ public class Score : MonoBehaviour
             MyscoreText.text = "Score: " + ScoreNum;
         }
     }
+
+    // private void ChangeScene()
+    // {
+    //     if (ScoreNum == 30)
+    //     {
+    //         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+    //     }
+    // }
 }

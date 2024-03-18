@@ -7,6 +7,7 @@ TagManager:
   - MyCoin
   - MySpike
   - MyBox
+  - Flag
   layers:
   - Default
   - TransparentFX

@@ -77,6 +77,10 @@ public class Player : MonoBehaviour
 			HealthBox(20);
 			Destroy(obj.gameObject);
         }
+
+		if (obj.tag == "Flag") {
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		}
     }
 
 	private void UpdateCharacter(int selectedOption)
