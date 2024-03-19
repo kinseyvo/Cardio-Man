@@ -1966,7 +1966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5812778002579753036, guid: 5c0c327846a5f2e4b87f8b8210e7ac51, type: 3}
       propertyPath: m_Name
-      value: Triangle
+      value: Flag
       objectReference: {fileID: 0}
     - target: {fileID: 5812778002579753036, guid: 5c0c327846a5f2e4b87f8b8210e7ac51, type: 3}
       propertyPath: m_TagString

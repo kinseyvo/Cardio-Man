@@ -11,17 +11,38 @@ public class ScoreManager : MonoBehaviour
     {
         var json = PlayerPrefs.GetString("scores", "{}");
         sd = JsonUtility.FromJson<ScoreData>(json);
+        if (sd == null)
+        {
+            sd = new ScoreData();
+        }
         //sd = new ScoreData();
     }
 
     public IEnumerable<Score> GetHighScores()
     {
-        return sd.scores.OrderByDescending(x => x.ScoreNum);
+        if (sd != null && sd.scores != null)
+        {
+            return sd.scores.OrderByDescending(x => x.ScoreNum);
+        }
+        else
+        {
+            Debug.LogWarning("score data or score list is null");
+            return Enumerable.Empty<Score>();
+        }
+        //return sd.scores.OrderByDescending(x => x.ScoreNum);
     }
 
     public void AddScore(Score score)
     {
-        sd.scores.Add(score);
+        if (sd != null && sd.scores != null)
+        {
+            sd.scores.Add(score);
+        }
+        else
+        {
+            Debug.LogWarning("Score data or score list is null! Cannot add score.");
+        }
+        //sd.scores.Add(score);
     }
 
     private void OnDestroy()
