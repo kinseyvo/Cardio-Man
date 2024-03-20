@@ -16,6 +16,9 @@ public class Score : MonoBehaviour
 
     public string playerName;
 
+    [SerializeField]
+    private FloatSO scoreSO;
+
     public Score(string name, int score)
     {
         this.playerName = name;
@@ -26,18 +29,42 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (scoreSO == null)
+        {
+            return;
+        }
+    
         ScoreNum = 0;
-        MyscoreText.text = "Score: " + ScoreNum;
+        MyscoreText.text = "Score: " + scoreSO.Value;
+        
+        //ScoreNum = 0;
+        // Original
+        // MyscoreText.text = "Score: " + ScoreNum;
+        // New
+        //MyscoreText.text = "Score: " + scoreSO.Value;
     }
 
     private void OnTriggerEnter2D(Collider2D Coin)
     {
         if (Coin.tag == "MyCoin")
         {
-            ScoreNum += 5;
+            // Original
+            // ScoreNum += 5;
+            // New
+            scoreSO.Value += 5;
             Destroy(Coin.gameObject);
-            MyscoreText.text = "Score: " + ScoreNum;
+            // Original
+            // MyscoreText.text = "Score: " + ScoreNum;
+            // New
+            MyscoreText.text = "Score: " + scoreSO.Value;
         }
+    }
+
+    public void LoadSceneAndKeepValue()
+    {
+        string dataToKeep = MyscoreText.text;
+        StaticData.valueToKeep = dataToKeep;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     // private void ChangeScene()

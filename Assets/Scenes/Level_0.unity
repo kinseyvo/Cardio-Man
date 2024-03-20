@@ -369,6 +369,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.21133338}
   serializedVersion: 2
   m_Radius: 0.5000001
+--- !u!114 &584550910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584550906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4babec713eac0b140a10d759014c0593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 1631274004}
 --- !u!1001 &686424818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -916,8 +929,8 @@ GameObject:
   - component: {fileID: 1631274003}
   - component: {fileID: 1631274005}
   - component: {fileID: 1631274004}
-  - component: {fileID: 1631274006}
   - component: {fileID: 1631274007}
+  - component: {fileID: 1631274008}
   m_Layer: 5
   m_Name: Score Text
   m_TagString: Untagged
@@ -1041,19 +1054,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631274002}
   m_CullTransparentMesh: 1
---- !u!114 &1631274006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631274002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4babec713eac0b140a10d759014c0593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myText: {fileID: 1631274004}
 --- !u!114 &1631274007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1067,6 +1067,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myText: {fileID: 1631274004}
+--- !u!114 &1631274008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631274002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 636511c5d0094994fb787f0858f00814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyscoreText: {fileID: 1631274004}
+  ScoreNum: 0
+  playerName: 
+  scoreSO: {fileID: 0}
 --- !u!4 &1690814302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 948389374382053228, guid: ecc6eab7d1a87e84a873cbe0a47b6c34, type: 3}
@@ -1860,6 +1876,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 943260423259107012, guid: ecc6eab7d1a87e84a873cbe0a47b6c34, type: 3}
+      propertyPath: scoreSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 03f624da5bf102b47ad2ecd216b20960, type: 2}
+    - target: {fileID: 943260423259107012, guid: ecc6eab7d1a87e84a873cbe0a47b6c34, type: 3}
       propertyPath: MyscoreText
       value: 
       objectReference: {fileID: 1631274004}
@@ -1979,6 +1999,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5812778002579753036, guid: 5c0c327846a5f2e4b87f8b8210e7ac51, type: 3}
       insertIndex: -1
       addedObject: {fileID: 584550909}
+    - targetCorrespondingSourceObject: {fileID: 5812778002579753036, guid: 5c0c327846a5f2e4b87f8b8210e7ac51, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 584550910}
   m_SourcePrefab: {fileID: 100100000, guid: 5c0c327846a5f2e4b87f8b8210e7ac51, type: 3}
 --- !u!1001 &7001696538992747282
 PrefabInstance:
