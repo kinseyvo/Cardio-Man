@@ -10,7 +10,6 @@ public class ScoreUI : MonoBehaviour
 
     void Start()
     {
-
         GameObject scoreGameObject1 = new GameObject("Score1");
         Score score1 = scoreGameObject1.AddComponent<Score>();
         score1.playerName = "Player 1";
@@ -24,8 +23,8 @@ public class ScoreUI : MonoBehaviour
         scoreManager.AddScore(score1);
         scoreManager.AddScore(score2);
 
-        //scoreManager.AddScore(new Score("Player 1", 21));
-        //scoreManager.AddScore(new Score("Player 2", 69));   
+        // scoreManager.AddScore(new Score("Player 1", 21));
+        // scoreManager.AddScore(new Score("Player 2", 69));   
 
         var scores = scoreManager.GetHighScores().ToArray();
         for (int i = 0; i < scores.Length; i++)

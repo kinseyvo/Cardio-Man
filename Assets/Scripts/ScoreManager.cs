@@ -11,22 +11,22 @@ public class ScoreManager : MonoBehaviour
     {
         var json = PlayerPrefs.GetString("scores", "{}");
         sd = JsonUtility.FromJson<ScoreData>(json);
-        if (sd == null)
-        {
-            sd = new ScoreData();
-        }
-        //sd = new ScoreData();
+        // if (sd == null)
+        // {
+        //     sd = new ScoreData();
+        // }
+        // sd = new ScoreData();
     }
 
     public IEnumerable<Score> GetHighScores()
     {
-        if (sd != null && sd.scores != null)
+        if (sd == null && sd.scores == null)
         {
             return sd.scores.OrderByDescending(x => x.ScoreNum);
         }
         else
         {
-            Debug.LogWarning("score data or score list is null");
+            Debug.Log("score data or score list is null");
             return Enumerable.Empty<Score>();
         }
         //return sd.scores.OrderByDescending(x => x.ScoreNum);
@@ -40,7 +40,7 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Score data or score list is null! Cannot add score.");
+            Debug.Log("score data or score list is null; cannot add score");
         }
         //sd.scores.Add(score);
     }

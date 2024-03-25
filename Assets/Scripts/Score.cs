@@ -23,6 +23,8 @@ public class Score : MonoBehaviour
     {
         this.playerName = name;
         this.ScoreNum = score;
+        // playerName = name;
+        // ScoreNum = score;
     }
 
 
