@@ -30,21 +30,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
-        // // Input.GetButtonDown("Jump")
-        // if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
-        // {
-        //     rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        //     Debug.Log("jump");
-
-        // }
-
-        // // Input.GetButtonUp("Jump")
-        // else if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0f)
-        // {
-        //     rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        //     Debug.Log("Jump");
-        // }
-
         Flip();
     }
 

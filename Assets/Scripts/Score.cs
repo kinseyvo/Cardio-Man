@@ -60,6 +60,18 @@ public class Score : MonoBehaviour
             // New
             MyscoreText.text = "Score: " + scoreSO.Value;
         }
+        if (Coin.tag == "Gem")
+        {
+            scoreSO.Value *= 2;
+            Destroy(Coin.gameObject);
+            MyscoreText.text = "Score: " + scoreSO.Value;
+        }
+        if (Coin.tag == "Stud")
+        {
+            scoreSO.Value *= 3;
+            Destroy(Coin.gameObject);
+            MyscoreText.text = "Score: " + scoreSO.Value;
+        }
     }
 
     public void LoadSceneAndKeepValue()

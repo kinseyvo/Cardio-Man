@@ -8,6 +8,8 @@ TagManager:
   - MySpike
   - MyBox
   - Flag
+  - Gem
+  - Stud
   layers:
   - Default
   - TransparentFX
