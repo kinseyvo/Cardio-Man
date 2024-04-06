@@ -1,5 +1,5 @@
 # Cardio-Man
-#### CPSC 386 Project 1 - Programmed by Kinsey Vo and Anthony Tran
+#### CPSC 386 Unity Project - Programmed by Kinsey Vo and Anthony Tran
 
 Game: A character running across the screen collecting items that will help or harm them.
 
@@ -7,6 +7,8 @@ Game: A character running across the screen collecting items that will help or h
   - Coin: +5 points
   - Health Box: + 20 HP
   - Spike: - 20 HP
+  - Gem - x2 points
+  - Lego Stud - x3 points
 
 ## Resources
   1) Main Menu Background - https://sarvendaralv.artstation.com/projects/PmeB51
@@ -16,3 +18,21 @@ Game: A character running across the screen collecting items that will help or h
   5) Pause Button - https://www.flaticon.com/free-icon/round-pause-button_61180
   6) Restart Button - https://www.pinterest.com/pin/restart-button--741897738597140062/
   7) Play Button - https://www.iconfinder.com/icons/485555/multimedia_play_play_button_player_resume_resume_button_sign_icon
+  8) 
+  9) 
+  10) 
+  11) 
+  12) 
+  13) 
+  14) 
+  15) 
+  16) 
+  17) 
+  18) 
+  19) 
+  20) 
+  21) 
+  22) 
+  23) 
+  24) 
+  25) 
