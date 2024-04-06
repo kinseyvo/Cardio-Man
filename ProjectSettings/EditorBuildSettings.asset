@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 16c3be8f809d4e8409c450b2902bc635
   - enabled: 1
     path: Assets/Scenes/Character Selection.unity
     guid: dcda24190401830499168af4651b3a52
@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InfoScreen.unity
     guid: 1f5f720333792b6498c3fcf50de2f91c
+  - enabled: 1
+    path: Assets/Scenes/SettingsMenu.unity
+    guid: 48be201d16f544a479c86cddae0f1f57
   - enabled: 1
     path: Assets/Scenes/DeathScreen.unity
     guid: 95e9a84e276e1a047add577a0e94be58

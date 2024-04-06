@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioSource sound;
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -22,7 +23,7 @@ public class MainMenu : MonoBehaviour
 
     public void GoToDeathScreen()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(9);
     }
 
     public void GoToInfo()
@@ -38,5 +39,10 @@ public class MainMenu : MonoBehaviour
     public void GoToLeaderboard()
     {
         SceneManager.LoadScene("Leaderboard");
+    }
+
+    public void PlayButton()
+    {
+        sound.Play();
     }
 }
