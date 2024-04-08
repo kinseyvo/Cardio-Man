@@ -1,7 +1,11 @@
 # Cardio-Man
 #### CPSC 386 Unity Project - Programmed by Kinsey Vo and Anthony Tran
 
-Game: A character running across the screen collecting items that will help or harm them.
+## Game
+A character running across different screens collecting items and dodging dangerous objects. Users can choose their character instead of playing the default skin. Each level has a different background to give players a new and different environment. Additionally, progression through levels is done by collecting flags (blue triangles). As levels progress, more obstacles, such as coins, spikes, and collectibles will appear. If players can collect all the flags and collectibles scattered throughout all the levels, then they win. Players lose when they fail to capture the flag before time runs out.
+
+## Controls
+The controls are up, down, left, right arrows to move and spacebar to jump.
 
 ## Items
   - Coin: +5 points
@@ -11,28 +15,4 @@ Game: A character running across the screen collecting items that will help or h
   - Lego Stud - x3 points
 
 ## Resources
-  1) Main Menu Background - https://sarvendaralv.artstation.com/projects/PmeB51
-  2) Game Background - https://opengameart.org/content/parallax-mountain-background
-  3) End Scene Background - https://www.istockphoto.com/video/game-over-text-animation-with-alpha-channe-gm1326959978-411471389
-  4) Home Button - https://icon-icons.com/icon/home-button/99695
-  5) Pause Button - https://www.flaticon.com/free-icon/round-pause-button_61180
-  6) Restart Button - https://www.pinterest.com/pin/restart-button--741897738597140062/
-  7) Play Button - https://www.iconfinder.com/icons/485555/multimedia_play_play_button_player_resume_resume_button_sign_icon
-  8) 
-  9) 
-  10) 
-  11) 
-  12) 
-  13) 
-  14) 
-  15) 
-  16) 
-  17) 
-  18) 
-  19) 
-  20) 
-  21) 
-  22) 
-  23) 
-  24) 
-  25) 
+  - See References.pdf
