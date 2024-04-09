@@ -41,6 +41,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Leaderboard");
     }
 
+    public void GoToSelect()
+    {
+        SceneManager.LoadScene("Character Selection");
+    }
+
     public void PlayButton()
     {
         sound.Play();

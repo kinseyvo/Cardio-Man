@@ -440,6 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0829146e8148049aca353316cab174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 0}
 --- !u!1 &934753732
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,10 +973,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Coin: +5 Points, Box: +20 HP, Spike: -20 HP
-
-    Gem: 2x Points, Lego
-    Stud: 3x Points'
+  m_text: 'Coin: +5 Points, Box: +20 HP, Spike: -15 HP, Lava: -10 HP, Gem: 2x Points,
+    Lego Stud: 3x Points'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1038,7 +1037,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -539.4357, w: -66.83264}
+  m_margin: {x: 0, y: 0, z: -557.58405, w: -66.83264}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

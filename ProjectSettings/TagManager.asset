@@ -10,6 +10,7 @@ TagManager:
   - Flag
   - Gem
   - Stud
+  - Lava
   layers:
   - Default
   - TransparentFX

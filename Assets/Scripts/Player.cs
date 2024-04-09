@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
         if (obj.tag == "MySpike")
         {
 			// Minus health
-			TakeDamage(20);
+			TakeDamage(15);
         }
 		
 		if (obj.tag == "MyBox")
@@ -80,6 +80,11 @@ public class Player : MonoBehaviour
 
 		if (obj.tag == "Flag") {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		}
+
+		if (obj.tag == "Lava")
+		{
+			TakeDamage(10);
 		}
     }
 
