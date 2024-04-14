@@ -27,6 +27,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_3.unity
     guid: 8a7a0457b999e1f4a9aea4fcecfbf972
   - enabled: 1
+    path: Assets/Scenes/Level_4.unity
+    guid: 77c8818ed8652874988fa52258fe20dd
+  - enabled: 1
+    path: Assets/Scenes/Level_4Decision.unity
+    guid: e58d37198944c544b884737cd2f14245
+  - enabled: 1
+    path: Assets/Scenes/Level_4extra.unity
+    guid: 20f89fcf557c34748aaadae04d0e4fcd
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: b3af25ad65ea0bb41a898ae2ae0a701f
+  - enabled: 1
     path: Assets/Scenes/Leaderboard.unity
     guid: 4982d415e4c0e5f42938da0a92d90e3f
   - enabled: 1

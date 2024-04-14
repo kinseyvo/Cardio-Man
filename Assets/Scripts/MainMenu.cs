@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour
 
     public void GoToDeathScreen()
     {
-        SceneManager.LoadScene(9);
+        SceneManager.LoadScene(14);
     }
 
     public void GoToInfo()

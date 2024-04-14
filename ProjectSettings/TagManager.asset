@@ -11,6 +11,7 @@ TagManager:
   - Gem
   - Stud
   - Lava
+  - Timer
   layers:
   - Default
   - TransparentFX

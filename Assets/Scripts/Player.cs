@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
 	public CharacterDatabase characterDB;
 
     public SpriteRenderer artworkSprite;
+	public Timer timer;
 
     private int selectedOption = 0;
 
@@ -32,6 +34,8 @@ public class Player : MonoBehaviour
         UpdateCharacter(selectedOption);
 		currentHealth = maxHealth;
 		healthBar.SetMaxHealth(maxHealth);
+
+		timer = FindObjectOfType<Timer>();
     }
 
     // Update is called once per frame
@@ -86,6 +90,13 @@ public class Player : MonoBehaviour
 		{
 			TakeDamage(10);
 		}
+
+		if (obj.tag == "Timer")
+        {
+            timer.TimerPickup(20);
+			// Gets rid of timer object after player gets it
+			Destroy((UnityEngine.Object)obj.gameObject);
+        }
     }
 
 	private void UpdateCharacter(int selectedOption)
