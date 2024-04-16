@@ -10,8 +10,11 @@ The controls are left and right arrows to move and spacebar to jump.
 ## Items
   - Coin: +5 Points
   - Health Box: +20 HP
+  - Timer: + 20 seconds
   - Spike: -15 HP
   - Lava: -10 HP
+  - Falling Spike: -5 HP
+  - Spinning Blade: -10 HP
   - Gem: 2x Points
   - Lego Stud: 3x Points
 
