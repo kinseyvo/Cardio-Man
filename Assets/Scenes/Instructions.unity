@@ -1628,7 +1628,7 @@ MonoBehaviour:
   m_text: 'Scoring:
 
     Coin: +5 Points, Box: +20 HP, Spike: -15 HP, Lava: -10 HP,
-    Gem: 2x Points, Lego Stud: 3x Points'
+    Blade: -10HP, Falling Spike: -5 HP, Gem: 2x Points, Lego Stud: 3x Points'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

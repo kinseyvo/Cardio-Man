@@ -97,6 +97,17 @@ public class Player : MonoBehaviour
 			// Gets rid of timer object after player gets it
 			Destroy((UnityEngine.Object)obj.gameObject);
         }
+
+		if (obj.tag == "FallingSpike")
+		{
+			TakeDamage(5);
+			Destroy(obj.gameObject);
+		}
+
+		if (obj.tag == "Blade")
+		{
+			TakeDamage(10);
+		}
     }
 
 	private void UpdateCharacter(int selectedOption)

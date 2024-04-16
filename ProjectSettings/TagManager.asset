@@ -12,6 +12,8 @@ TagManager:
   - Stud
   - Lava
   - Timer
+  - FallingSpike
+  - Blade
   layers:
   - Default
   - TransparentFX
