@@ -15,8 +15,15 @@ public class Player : MonoBehaviour
     private int selectedOption = 0;
 
 	public int maxHealth = 100;
-	public int currentHealth;
-	public HealthBar healthBar; 
+
+	// added static
+	public static int currentHealth;
+	public HealthBar healthBar;
+
+	public float magnetRange = 5f;
+	public float magnetForce = 10f;
+	public string coinTag = "MyCoin";
+
 
     // Start is called before the first frame update
     void Start()
@@ -107,6 +114,21 @@ public class Player : MonoBehaviour
 		if (obj.tag == "Blade")
 		{
 			TakeDamage(10);
+		}
+
+		if (obj.tag == "Magnet")
+		{
+			// Activate the coin magnet
+			Collider2D[] nearbyCoins = Physics2D.OverlapCircleAll(transform.position, magnetRange);
+			foreach (Collider2D coinCollider in nearbyCoins)
+			{
+				if (coinCollider.CompareTag("MyCoin"))
+				{
+					Vector2 direction = (transform.position - coinCollider.transform.position).normalized;
+					coinCollider.GetComponent<Rigidbody2D>().AddForce(direction * magnetForce);
+				}
+			}
+			Destroy(obj.gameObject);
 		}
     }
 

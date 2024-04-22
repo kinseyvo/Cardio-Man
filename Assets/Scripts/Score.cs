@@ -19,6 +19,9 @@ public class Score : MonoBehaviour
     [SerializeField]
     private FloatSO scoreSO;
 
+    public float magnetRange = 5f;
+	public float magnetForce = 10f;
+
     public Score(string name, int score)
     {
         this.playerName = name;
@@ -72,6 +75,20 @@ public class Score : MonoBehaviour
             Destroy(Coin.gameObject);
             MyscoreText.text = "Score: " + scoreSO.Value;
         }
+        if (Coin.tag == "Magnet")
+		{
+			// Activate the coin magnet
+			Collider2D[] nearbyCoins = Physics2D.OverlapCircleAll(transform.position, magnetRange);
+			foreach (Collider2D coinCollider in nearbyCoins)
+			{
+				if (coinCollider.CompareTag("MyCoin"))
+				{
+					Vector2 direction = (transform.position - coinCollider.transform.position).normalized;
+					coinCollider.GetComponent<Rigidbody2D>().AddForce(direction * magnetForce);
+				}
+			}
+			Destroy(Coin.gameObject);
+		}
     }
 
     public void LoadSceneAndKeepValue()
