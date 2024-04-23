@@ -49,6 +49,16 @@ public class Score : MonoBehaviour
         //MyscoreText.text = "Score: " + scoreSO.Value;
     }
 
+    public int GetCurrentScore()
+    {
+        return ScoreNum;
+    }
+
+    public float GetScoreSOValue()
+    {
+        return scoreSO.Value;
+    }
+
     private void OnTriggerEnter2D(Collider2D Coin)
     {
         if (Coin.tag == "MyCoin")
@@ -62,18 +72,38 @@ public class Score : MonoBehaviour
             // MyscoreText.text = "Score: " + ScoreNum;
             // New
             MyscoreText.text = "Score: " + scoreSO.Value;
+
+            // new
+            if (scoreSO.Value > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                // Save the new high score to PlayerPrefs
+                PlayerPrefs.SetInt("HighScore", (int)scoreSO.Value);
+                PlayerPrefs.Save();
+            }
         }
         if (Coin.tag == "Gem")
         {
             scoreSO.Value *= 2;
             Destroy(Coin.gameObject);
             MyscoreText.text = "Score: " + scoreSO.Value;
+            if (scoreSO.Value > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                // Save the new high score to PlayerPrefs
+                PlayerPrefs.SetInt("HighScore", (int)scoreSO.Value);
+                PlayerPrefs.Save();
+            }
         }
         if (Coin.tag == "Stud")
         {
             scoreSO.Value *= 3;
             Destroy(Coin.gameObject);
             MyscoreText.text = "Score: " + scoreSO.Value;
+            if (scoreSO.Value > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                // Save the new high score to PlayerPrefs
+                PlayerPrefs.SetInt("HighScore", (int)scoreSO.Value);
+                PlayerPrefs.Save();
+            }
         }
         if (Coin.tag == "Magnet")
 		{
