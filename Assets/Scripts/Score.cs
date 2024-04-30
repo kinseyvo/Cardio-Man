@@ -22,6 +22,8 @@ public class Score : MonoBehaviour
     public float magnetRange = 5f;
 	public float magnetForce = 10f;
 
+    public PlayfabManager playfabManager;
+
     public Score(string name, int score)
     {
         this.playerName = name;
@@ -136,4 +138,30 @@ public class Score : MonoBehaviour
 
     //     }
     // }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "WinScreen")
+        {
+            if (playfabManager != null && scoreSO != null)
+            {
+                int scoreAsInt = (int)scoreSO.Value;  // Truncate the decimal
+                playfabManager.SendLeaderboard(scoreAsInt);
+            }
+            else
+            {
+                Debug.LogError("PlayfabManager or scoreSO reference not set.");
+            }
+        }
+    }
 }

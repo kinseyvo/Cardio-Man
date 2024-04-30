@@ -7,12 +7,22 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 16f;
+    private float originalJumpingPower;
+    private float originalSpeed;
     private bool isFacingRight = true;
     private bool isGrounded;
+    private bool isSpeedBoosted = false;  // Track if speed boost is active
+    private bool isJumpBoosted = false;  // Track if jump boost is active
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+
+    private void Awake()
+    {
+        originalSpeed = speed;  // Set original speed
+        originalJumpingPower = jumpingPower;  // Set original jumping power
+    }
 
     // Update is called once per frame
     void Update()
@@ -58,6 +68,26 @@ public class PlayerMovement : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+        }
+    }
+
+    public IEnumerator ActivatePowerup(Powerup.PowerupType type, float duration)
+    {
+        if (type == Powerup.PowerupType.SpeedBoost && !isSpeedBoosted)
+        {
+            speed *= 1.5f;
+            isSpeedBoosted = true;  // Set speed boost flag
+            yield return new WaitForSeconds(duration);
+            speed = originalSpeed;  // Reset to original speed
+            isSpeedBoosted = false;  // Reset flag
+        }
+        else if (type == Powerup.PowerupType.JumpBoost && !isJumpBoosted)
+        {
+            jumpingPower *= 1.5f;
+            isJumpBoosted = true;  // Set jump boost flag
+            yield return new WaitForSeconds(duration);
+            jumpingPower = originalJumpingPower;  // Reset to original jumping power
+            isJumpBoosted = false;  // Reset flag
         }
     }
 }

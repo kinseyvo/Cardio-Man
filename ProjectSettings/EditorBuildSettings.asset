@@ -27,6 +27,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_3.unity
     guid: 8a7a0457b999e1f4a9aea4fcecfbf972
   - enabled: 1
+    path: Assets/Scenes/Level_3Decision.unity
+    guid: 99c63c56db4a6274681f12aa1eef3380
+  - enabled: 1
+    path: Assets/Scenes/Level_3Boss.unity
+    guid: 7f330b8c027c856419f6453f3e8b3b54
+  - enabled: 1
+    path: Assets/Scenes/Level_3Spike.unity
+    guid: eacdf0d493ef0f5478ab3fdd69d08c63
+  - enabled: 1
     path: Assets/Scenes/Level_4.unity
     guid: 77c8818ed8652874988fa52258fe20dd
   - enabled: 1

@@ -173,6 +173,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 886045297}
+--- !u!1 &390566455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 390566457}
+  - component: {fileID: 390566456}
+  m_Layer: 0
+  m_Name: Playfab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &390566456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390566455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6025f365055202d4199d7202a1e8c6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowPrefab: {fileID: 0}
+  rowsParent: {fileID: 0}
+--- !u!4 &390566457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390566455}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 760.1628, y: 289.39334, z: 3.588573}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &433236712
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +755,7 @@ MonoBehaviour:
   scoreSO: {fileID: 0}
   magnetRange: 0
   magnetForce: 0
+  playfabManager: {fileID: 390566456}
 --- !u!114 &655487740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,6 +787,7 @@ MonoBehaviour:
   scoreSO: {fileID: 11400000, guid: 03f624da5bf102b47ad2ecd216b20960, type: 2}
   magnetRange: 0
   magnetForce: 0
+  playfabManager: {fileID: 390566456}
 --- !u!1 &844208597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,10 +1549,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 523514182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 4.093628, y: 47}
-  m_SizeDelta: {x: -679.2708, y: 50}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 47.94}
+  m_SizeDelta: {x: 387.4108, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1776530258
 MonoBehaviour:
@@ -1589,7 +1637,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -73.401306, y: 0, z: -112.21759, w: 0}
+  m_margin: {x: 0.6333313, y: 0, z: -0.6131592, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1821,3 +1869,4 @@ SceneRoots:
   - {fileID: 1181817279}
   - {fileID: 886045298}
   - {fileID: 433236715}
+  - {fileID: 390566457}

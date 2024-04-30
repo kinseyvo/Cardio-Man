@@ -901,7 +901,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 142, y: -109.72}
+  m_AnchoredPosition: {x: 142, y: -120}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1257993618
@@ -1139,8 +1139,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -62.96}
-  m_SizeDelta: {x: 174.8406, y: 43.6997}
+  m_AnchoredPosition: {x: 26.7755, y: -72.87}
+  m_SizeDelta: {x: 228.3915, y: 43.6997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1507208831
 MonoBehaviour:
@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -49.791077, w: 2.2672882}
+  m_margin: {x: 0, y: 0, z: 0.8656616, w: 2.2672882}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1268,6 +1268,9 @@ MonoBehaviour:
   ScoreNum: 0
   playerName: 
   scoreSO: {fileID: 0}
+  magnetRange: 0
+  magnetForce: 0
+  playfabManager: {fileID: 0}
 --- !u!114 &1507208836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1284,6 +1287,9 @@ MonoBehaviour:
   ScoreNum: 0
   playerName: 
   scoreSO: {fileID: 11400000, guid: 03f624da5bf102b47ad2ecd216b20960, type: 2}
+  magnetRange: 0
+  magnetForce: 0
+  playfabManager: {fileID: 0}
 --- !u!1 &1801037613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,7 +1402,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -145, y: -109.72}
+  m_AnchoredPosition: {x: -144, y: -120}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022940314
